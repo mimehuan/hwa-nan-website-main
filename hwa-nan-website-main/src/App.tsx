@@ -1,5 +1,8 @@
 import Navbar from "@/scenes/navbar"; // referencing the folder w index.tsx, no need to directly import index.tsx
 import VideoMain from "@/components/VideoMain";
+import Footer from "@/components/Footer";
+import MoreStuff from "@/components/MoreStuff";
+import CarouselMain from "@/components/CarouselMain";
 import { useEffect, useState } from "react";
 import { SelectedPage } from "@/shared/types";
 import { Route, Routes } from "react-router-dom";
@@ -9,6 +12,7 @@ import NewsAndEvents from "./scenes/newsandevents";
 import Recruitment from "./scenes/recruitment";
 import StudyInUS from "./scenes/studyinus";
 import Home from "./scenes/home";
+
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -42,6 +46,10 @@ function App() {
       isTopOfPage={isTopOfPage}
       selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
      <VideoMain />
+     <MoreStuff />
+     <CarouselMain/>
+     <Footer />
+     
     </div>
     </>
   );
